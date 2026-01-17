@@ -57,3 +57,79 @@ function App() {
 }
 
 export default App;
+
+// Equivalent code using class components:
+/*
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      basicPay: "",
+      totalSalary: 0,
+      grade: "",
+      bonus: 0
+    };
+  }
+
+  calculateSalary = () => {
+    const bp = parseFloat(this.state.basicPay);
+    const da = 0.3 * bp;
+    const hra = 0.1 * bp;
+    const sa = 0.05 * bp;
+    const total = bp + da + hra + sa;
+
+    this.setState({ totalSalary: total });
+  };
+
+  checkGrade = () => {
+    const ts = this.state.totalSalary;
+    let g = "";
+
+    if (ts >= 10000 && ts <= 20000) g = "A";
+    else if (ts <= 30000) g = "B";
+    else if (ts <= 40000) g = "C";
+    else if (ts > 40000) g = "EXC";
+
+    this.setState({ grade: g });
+  };
+
+  checkBonus = () => {
+    const bp = parseFloat(this.state.basicPay);
+    let b = 0;
+
+    if (this.state.grade === "A") b = 0.15 * bp;
+    else if (this.state.grade === "B") b = 0.12 * bp;
+    else if (this.state.grade === "C") b = 0.06 * bp;
+    else if (this.state.grade === "EXC") b = 0.05 * bp;
+
+    this.setState({ bonus: b });
+  };
+
+  render() {
+    return (
+      <div className="container">
+        <h2>Employee Tax Calculator</h2>
+
+        <input
+          type="number"
+          placeholder="Enter Basic Pay"
+          value={this.state.basicPay}
+          onChange={(e) => this.setState({ basicPay: e.target.value })}
+        />
+
+        <button onClick={this.calculateSalary}>Calculate Salary</button>
+        <p>Total Salary: {this.state.totalSalary}</p>
+
+        <button onClick={this.checkGrade}>Check Grade</button>
+        <p>Grade: {this.state.grade}</p>
+
+        <button onClick={this.checkBonus}>Check Bonus</button>
+        <p>Bonus: {this.state.bonus}</p>
+      </div>
+    );
+  }
+}
+
+export default App;
+*/
