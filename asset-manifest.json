@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lab-manual-fsd/exp-4/static/css/main.981a3a96.css",
+    "main.js": "/lab-manual-fsd/exp-4/static/js/main.9da151e6.js",
+    "index.html": "/lab-manual-fsd/exp-4/index.html",
+    "main.981a3a96.css.map": "/lab-manual-fsd/exp-4/static/css/main.981a3a96.css.map",
+    "main.9da151e6.js.map": "/lab-manual-fsd/exp-4/static/js/main.9da151e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.981a3a96.css",
+    "static/js/main.9da151e6.js"
+  ]
+}
