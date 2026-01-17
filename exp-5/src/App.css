@@ -1,0 +1,56 @@
+body {
+  background-color: #f2f6fc;
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.calculator,
+.game {
+  width: 280px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  padding: 8px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.score {
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.question {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.message {
+  font-weight: bold;
+  margin-top: 8px;
+}
